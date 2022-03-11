@@ -10,12 +10,16 @@ var treemap = {
                 ["1 nyy 1", "1 nyy 2", "1 nyy 3"], ["1 nyn 1", "1 nyn 2", "1 nyn 3"], 
                 ["1 nny 1", "1 nny 2", "1 nny 3"], ["1 nnn 1", "1 nnn 2", "1 nnn 3"]] //nqma gi samite vuprosi oshte, ta tva e filler-a
 };
-var curr_index=0, question_index=0;
+var curr_id=0, question_index=0, user_input=2;
 
 function drawText(text, x, y){
     context.fillStyle="black"
     context.font="24px Aclonica"
     context.fillText(text, x, y)
+}
+
+function change_iser_input(num){
+    user_input=num //-1=ne, 0=ddz, 1=da, 2=mezhdinno dokato nishto ne e natisnato
 }
 
 function displayQuestion(id) {
@@ -28,6 +32,23 @@ function displayQuestion(id) {
 }
 
 function update() {
-    drawText("aaa", 50, 50) //prosto testche
+    if(user_input!=2 && (treemap.idForYes[curr_id] || treemap.idForNo[curr_id]) && question_index<3){
+        if(user_input==1){
+            curr_id=treemap.idForYes[curr_id];
+            question_index=0;
+            displayQuestion(curr_id);
+            user_input=2;
+        }
+        if(user_input==-1){
+            curr_id=treemap.idForNo[curr_id];
+            question_index=0;
+            displayQuestion(curr_id);
+            user_input=2; 
+        }
+        if(user_input==0){
+            question_index++;
+            displayQuestion(curr_id);
+            user_input=2; 
+        }
+    }    
 }
-function draw() {}
