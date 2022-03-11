@@ -19,7 +19,7 @@ var buttonno=document.getElementById('buttonForNo');
 var buttonidk=document.getElementById('buttonForIDunno');
 
 function drawText(text, x, y){
-    context.fillStyle="black"
+    context.fillStyle="white"
     context.font="24px Aclonica"
     context.fillText(text, x, y)
 }
@@ -53,7 +53,7 @@ for(i=0; i<treemap.questions.length; i++){
 
 function update() {
     if(!has_first_print_happened){
-        drawText(treemap.questions[0][question_index], 200, 100)
+        drawText(treemap.questions[0][question_index], 750, 300)
         has_first_print_happened=true
     }
     if(user_input!=2 && (treemap.idForYes[curr_id] || treemap.idForNo[curr_id]) && question_index<3){
