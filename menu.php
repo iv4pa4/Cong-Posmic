@@ -1,6 +1,8 @@
 
 <html>
 <head>
+<link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+<link rel="stylesheet" href="style.css?id=2">
 </head>
 <body>
 <h1>Какво си търсиш?</h1>

@@ -7,9 +7,11 @@ if(!$planet) die("Not found");
 ?>
 <html>
 <head>
+<link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+<link rel="stylesheet" href="style.css?id=2">
 </head>
 <body>
-<h1><?=$planet[0]['planet_url'];?></h1>
+<h1><?=$planet[0]['planet_name'];?></h1>
 <?php
 
 if($planet[0]['planet_photo']){
