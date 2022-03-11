@@ -16,7 +16,7 @@ $objects = Select ($query);
 if(is_array($objects)){
 	foreach($objects as $k => $value){
 		?>
-		<a class="button2" href="object_template.php?pid=<?=$value["object_id"];?>"><?=$value["object_name"];?></a><br />
+		<h4><?=$value["fact_self"];?></h4><br />
 		<br/>
 		<?php
 	}
