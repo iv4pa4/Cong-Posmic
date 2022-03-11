@@ -1,7 +1,7 @@
 <?php
 include("base_connection.php");
-$query="SELECT * FROM planets ORDER BY planet_id ASC";
-$planets= Select($query);
+$query = "SELECT * FROM planets ORDER BY planet_id ASC";
+$planets = Select ($query);
 ?>
 
 <html>
@@ -11,14 +11,12 @@ $planets= Select($query);
 <h1>За коя планета искаш да научиш?</h1>
 <?php
 if(is_array($planets)){
-	foreach($planets as $k =>$value){
+	foreach($planets as $k => $value){
 		?>
-		<a href="?pid=<?=$value["planet_id"];?>"><?=$value["planet_name"];?></a></br>
-		</br>
+		<a href="planet_template.php?pid=<?=$value["planet_id"];?>"><?=$value["planet_name"];?></a><br />
+		<br/>
 		<?php
-		
 	}
-	
 }
 ?>
 </body>
