@@ -1,20 +1,22 @@
 var treemap = {
-    idForYes: [1, 3, 5, 7, 9, 11, 13, null, null, null, null, null, null, null, null],
-    idForNo: [2, 4, 6, 8, 10, 12, 14, null, null, null, null, null, null, null, null], //na principa "shte te izpratq nakudeto tva sochi i azko sochi null nqma da se zanimavam s teb" (budget pointers)
+    idForYes: [1, 3, 5, null, 7, null, 9, null, 11, null, 13, null, null, null, null],
+    idForNo: [2, 4, 6, null, 8, null, 10, null, 12, null, 14, null, null, null, null], //na principa "shte te izpratq nakudeto tva sochi i azko sochi null nqma da se zanimavam s teb" (budget pointers)
     questions: [["1 1", "1 2", "1 3"],
-                ["1 y 1", "1 y 2", "1 y 3"], ["1 n 1", "1 n 2", "1 n 3"], 
-                ["1 yy 1", "1 yy 2", "1 yy 3"], ["1 yn 1", "1 yn 2", "1 yn 3"], 
-                ["1 ny 1", "1 ny 2", "1 ny 3"], ["1 nn 1", "1 nn 2", "1 nn 3"],
-                ["1 yyy 1", "1 yyy 2", "1 yyy 3"], ["1 yyn 1", "1 yyn 2", "1 yyn 3"], 
-                ["1 yny 1", "1 yny 2", "1 yny 3"], ["1 ynn 1", "1 ynn 2", "1 ynn 3"], 
-                ["1 nyy 1", "1 nyy 2", "1 nyy 3"], ["1 nyn 1", "1 nyn 2", "1 nyn 3"], 
-                ["1 nny 1", "1 nny 2", "1 nny 3"], ["1 nnn 1", "1 nnn 2", "1 nnn 3"]] //nqma gi samite vuprosi oshte, ta tva e filler-a
+                ["5 1", "5 2", "5 3"], ["2 1", "2 2", "2 3"], 
+                ["Saturn 1", "Saturn 2", "Saturn 3"], ["6 1", "6 2", "6 3"], 
+                ["Zemq 1", "Zemq 2", "Zemq 3"], ["3 1", "3 2", "3 3"],
+                ["Jupiter 1", "Jupiter 2", "Jupiter 3"], ["7 1", "7 2", "7 3"], 
+                ["Mars 1", "Mars 2", "Mars 3"], ["4 1", "4 2", "4 3"], 
+                ["Neptun 1", "Neptun 2", "Neptun 3"], ["Uran 1", "Uran 2", "Uran 3"], 
+                ["Merkurii 1", "Merkurii 2", "Merkurii 3"], ["Venera 1", "Venera 2", "Venera 3"]] //chakame vuproscheta ^-^
 };
 var curr_id=0;
 var question_index=0;
 var user_input=2; //-1=ne, 0=nz, 1=da
 var has_first_print_happened=false;
-
+var buttonyes=document.getElementById('buttonForYes');
+var buttonno=document.getElementById('buttonForNo');
+var buttonidk=document.getElementById('buttonForIDunno');
 
 function drawText(text, x, y){
     context.fillStyle="black"
@@ -72,5 +74,20 @@ function update() {
             displayQuestion(curr_id);
             user_input=2; 
         }
+    }
+    if(!(treemap.idForYes[curr_id] || treemap.idForNo[curr_id])){
+        if(user_input==-1){
+            context.clearRect(0, 0, 800, 600);
+            drawText("ti pechelish", 200, 100)
+            buttonyes.style.display="none";
+            buttonno.style.display="none";
+        }
+        if(user_input==1){
+            context.clearRect(0, 0, 800, 600);
+            drawText("az pechelq", 200, 100)
+            buttonyes.style.display="none";
+            buttonno.style.display="none";
+        }
+        buttonidk.style.display="none";
     }
 }
