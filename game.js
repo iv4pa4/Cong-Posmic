@@ -10,7 +10,11 @@ var treemap = {
                 ["1 nyy 1", "1 nyy 2", "1 nyy 3"], ["1 nyn 1", "1 nyn 2", "1 nyn 3"], 
                 ["1 nny 1", "1 nny 2", "1 nny 3"], ["1 nnn 1", "1 nnn 2", "1 nnn 3"]] //nqma gi samite vuprosi oshte, ta tva e filler-a
 };
-var curr_id=0, question_index=0, user_input=2;
+var curr_id=0;
+var question_index=0;
+var user_input=2; //-1=ne, 0=nz, 1=da
+var has_first_print_happened=false;
+
 
 function drawText(text, x, y){
     context.fillStyle="black"
@@ -19,19 +23,37 @@ function drawText(text, x, y){
 }
 
 function change_iser_input(num){
-    user_input=num //-1=ne, 0=ddz, 1=da, 2=mezhdinno dokato nishto ne e natisnato
+    user_input=num
 }
 
 function displayQuestion(id) {
     context.clearRect(0, 0, window.innerWidth, window.innerHeight);
     if(question_index==3){
-        drawText("procheti malko poveche purvo pls", 500, 100)
+        drawText("procheti malko poveche purvo pls", 200, 100)
         return
     }
-    drawText(treemap.questions[id][question_index], 500, 100);
+    drawText(treemap.questions[id][question_index], 200, 100);
+}
+
+function shuffle(array) {
+    var currentIndex = array.length,  randomIndex;
+    
+    while(currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    }
+}
+
+for(i=0; i<treemap.questions.length; i++){
+    shuffle(treemap.questions[i]);
 }
 
 function update() {
+    if(!has_first_print_happened){
+        drawText(treemap.questions[0][question_index], 200, 100)
+        has_first_print_happened=true
+    }
     if(user_input!=2 && (treemap.idForYes[curr_id] || treemap.idForNo[curr_id]) && question_index<3){
         if(user_input==1){
             curr_id=treemap.idForYes[curr_id];
@@ -50,5 +72,5 @@ function update() {
             displayQuestion(curr_id);
             user_input=2; 
         }
-    }    
+    }
 }
