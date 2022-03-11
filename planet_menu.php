@@ -11,6 +11,7 @@ $planets = Select ($query);
 </head>
 <body>
 <h1 class="heading">За коя планета искаш да научиш?</h1>
+<div align="center">
 <?php
 if(is_array($planets)){
 	foreach($planets as $k => $value){
@@ -21,6 +22,7 @@ if(is_array($planets)){
 	}
 }
 ?>
+</div>
 </body>
 
 </html>
