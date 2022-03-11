@@ -7,12 +7,7 @@
 	<meta charset="UTF-8"></meta>
 </head>
 	<body  onload="init()">
-        <div class="buttons_div">
-            <p id="buttonForYes" class="button1" style="border-style: solid" onclick="change_iser_input(1)">Yes</p>
-            <p id="buttonForNo" class="button1" style="border-style: solid" onclick="change_iser_input(-1)">No</p>
-            <p id="buttonForIDunno" class="button1" style="border-style: solid" onclick="change_iser_input(0)">I dunno</p>
-        </div>
-		<canvas id="canvas-id" width="800" height="600">
+        <canvas id="canvas-id" width="1200" height="600">
             <script>
 		  	   let updateTime = 10; // in ms
 		  	   const canvas = document.getElementById("canvas-id");
@@ -31,5 +26,10 @@
                 }
 			</script>
 		</canvas>
+        <div class="buttons_div">
+            <p id="buttonForYes" class="button1" style="border-style: solid" onclick="change_iser_input(1)">Yes</p>
+            <p id="buttonForNo" class="button1" style="border-style: solid" onclick="change_iser_input(-1)">No</p>
+            <p id="buttonForIDunno" class="button1" style="border-style: solid" onclick="change_iser_input(0)">I dunno</p>
+        </div>
 	</body>
 </html>
