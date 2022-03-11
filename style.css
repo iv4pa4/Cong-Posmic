@@ -78,4 +78,9 @@ body{
   color: white;
   text-align:right;
   text-shadow: 4px 4px black;
+  padding-right:50px;
+}
+
+.pad{
+	padding-left:50px;
 }

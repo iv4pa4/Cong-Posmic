@@ -17,7 +17,7 @@ if(!$planet) die("Not found");
 
 if($planet[0]['planet_photo']){
 	?>
-	<img src="photos/<?=$planet[0]['planet_photo']?>" width="500" align="left"/>
+	<img src="photos/<?=$planet[0]['planet_photo']?>" width="500" align="left" class="pad"/>
 	<?php
 }
 ?>
