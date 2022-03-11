@@ -1,6 +1,9 @@
+<?php
+include("base_connection.php");
+?>
+
 <html>
 <head>
-
 </head>
 <body>
 <a href="">Космическите хроники</>

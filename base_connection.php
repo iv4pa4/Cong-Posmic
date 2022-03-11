@@ -18,7 +18,7 @@ function Select (&query){
 	if(empty($query)){
 		return false;
 	}
-	if(!$res=mysqli_query($dblinkk, $query)){
+	if(!$res=mysqli_query($dblink, $query)){
 		$error='Date:'.date('Y-m-d H:i:s').''.mysqli_error($dblink);
 		die($error);
 	}
