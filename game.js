@@ -31,10 +31,10 @@ function change_iser_input(num){
 function displayQuestion(id) {
     context.clearRect(0, 0, window.innerWidth, window.innerHeight);
     if(question_index==3){
-        drawText("Иди да прочетеш малко повече и тогава пробвай пак!", 200, 100)
+        drawText("Иди да прочетеш малко повече и тогава пробвай пак!", 750, 300)
         return
     }
-    drawText(treemap.questions[id][question_index], 200, 100);
+    drawText(treemap.questions[id][question_index], 750, 300);
 }
 
 function shuffle(array) {
@@ -78,13 +78,13 @@ function update() {
     if(!(treemap.idForYes[curr_id] || treemap.idForNo[curr_id])){
         if(user_input==-1){
             context.clearRect(0, 0, 800, 600);
-            drawText("Поздравления! Ти ме победи", 200, 100)
+            drawText("Поздравления! Ти ме победи", 750, 300)
             buttonyes.style.display="none";
             buttonno.style.display="none";
         }
         if(user_input==1){
             context.clearRect(0, 0, 800, 600);
-            drawText("Аз винаги печеля!", 200, 100)
+            drawText("Аз винаги печеля!", 750, 300)
             buttonyes.style.display="none";
             buttonno.style.display="none";
         }
