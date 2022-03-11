@@ -5,6 +5,11 @@
 	<meta charset="UTF-8"></meta>
 </head>
 	<body  onload="init()">
+        <div class="buttons_div">
+            <p id="buttonForYes" onclick="change_iser_input(1)">Yes</p>
+            <p id="buttonForNo" onclick="change_iser_input(-1)">No</p>
+            <p id="buttonForIDunno" onclick="change_iser_input(0)">I dunno</p>
+        </div>
 		<canvas id="canvas-id" width="window.innerWidth" height="window.innerHeight">
             <script>
 		  	   let updateTime = 10; // in ms
