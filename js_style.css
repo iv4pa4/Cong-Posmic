@@ -1,0 +1,72 @@
+body{
+	margin:0;
+	padding:0;
+	font-family: 'Aclonica';font-size: 22px;
+	background-image: url(backg.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+	
+}
+
+.button1{
+  background-color: rgb(75,0,130);
+  border-style: solid;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  width: 350;
+	
+}
+
+.button1:hover{ background:rgb(153,50,204);
+}
+.button1:active{background:rgb(147,112,219);}
+
+.buttons_div {
+	text-align:center;
+	padding-bottom:300px;
+}
+.buttons_dоv {
+	text-align:center;
+	padding-top:200px;
+}
+
+.button2 {
+  background-color: rgb(75,0,130);
+  border-style: solid;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  width: 200;
+}
+.button2:hover{ background:rgb(153,50,204);
+}
+.button2:active{background:rgb(147,112,219);}
+
+.buttons_dev {
+	text-align:center;
+	padding-top:200px;
+	padding-left:100px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height:80%;
+}
+
+.heading{
+  padding-top: 50px;
+  color: white;
+  text-align:center;
+  text-shadow: 4px 4px black;
+	
+}

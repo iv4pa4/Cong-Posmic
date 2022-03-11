@@ -12,15 +12,16 @@ if(!$planet) die("Not found");
 </head>
 <body>
 <h1 class="heading"><?=$planet[0]['planet_name'];?></h1>
+<div>
 <?php
 
 if($planet[0]['planet_photo']){
 	?>
-	<img src="photos/<?=$planet[0]['planet_photo']?>" width="500"/>
+	<img src="photos/<?=$planet[0]['planet_photo']?>" width="500" align="left"/>
 	<?php
 }
 ?>
-<h4 class="text_info">Обща информация: <?=$planet[0]['planet_info']; ?></h4>
-
+<h4 class="text_info" align="right">Обща информация: <?=$planet[0]['planet_info']; ?></h4>
+</div>
 </body>
 </html>
