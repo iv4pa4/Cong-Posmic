@@ -1,6 +1,3 @@
-<?php
-include("base_connection.php");
-?>
 
 <html>
 <head>
