@@ -72,3 +72,10 @@ body{
   text-shadow: 4px 4px black;
 	
 }
+
+.text_info{
+  padding-top: 50px;
+  color: white;
+  text-align:right;
+  text-shadow: 4px 4px black;
+}

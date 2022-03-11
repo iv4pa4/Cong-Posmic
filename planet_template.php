@@ -20,7 +20,7 @@ if($planet[0]['planet_photo']){
 	<?php
 }
 ?>
-<h4 class="heading">Обща информация: <?=$planet[0]['planet_info']; ?></h4>
+<h4 class="text_info">Обща информация: <?=$planet[0]['planet_info']; ?></h4>
 
 </body>
 </html>
