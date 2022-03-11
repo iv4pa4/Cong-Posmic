@@ -8,7 +8,7 @@
 <h1 class="heading">За какво искаш да научиш</h1>
 <div class="buttons_dоv">
 <a href="planet_menu.php" class="button1">Планетите от слънчевата система</а>
-<a href=""class="button1">Космически тела</a>
+<a href="objects.php"class="button1">Космически тела</a>
 </div>
 </body>
 
