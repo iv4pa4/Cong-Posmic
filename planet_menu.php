@@ -10,12 +10,12 @@ $planets = Select ($query);
 <link rel="stylesheet" href="style.css?id=2">
 </head>
 <body>
-<h1>За коя планета искаш да научиш?</h1>
+<h1 class="heading">За коя планета искаш да научиш?</h1>
 <?php
 if(is_array($planets)){
 	foreach($planets as $k => $value){
 		?>
-		<a href="planet_template.php?pid=<?=$value["planet_id"];?>"><?=$value["planet_name"];?></a><br />
+		<a class="button2" href="planet_template.php?pid=<?=$value["planet_id"];?>"><?=$value["planet_name"];?></a><br />
 		<br/>
 		<?php
 	}

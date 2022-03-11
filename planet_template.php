@@ -11,7 +11,7 @@ if(!$planet) die("Not found");
 <link rel="stylesheet" href="style.css?id=2">
 </head>
 <body>
-<h1><?=$planet[0]['planet_name'];?></h1>
+<h1 class="heading"><?=$planet[0]['planet_name'];?></h1>
 <?php
 
 if($planet[0]['planet_photo']){
@@ -20,7 +20,7 @@ if($planet[0]['planet_photo']){
 	<?php
 }
 ?>
-<h4>Обща информация: <?=$planet[0]['planet_info']; ?></h4>
+<h4 class="heading">Обща информация: <?=$planet[0]['planet_info']; ?></h4>
 
 </body>
 </html>

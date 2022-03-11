@@ -5,12 +5,17 @@
 <link rel="stylesheet" href="style.css?id=2">
 </head>
 <body>
-<h1>Какво си търсиш?</h1>
-<a href="chronic_info.php" class="button1">Информация за планетите и космически тела</a><br/>
+<h1 class="heading">Какво си търсиш?</h1>
+<a href="chronic_info.php" class="button1">Информация за планетите и космически тела</a><br/>\
+<br/>
 <a href="" class="button1">Малко интересни факти</a><br/>
+<br/>
 <a href="" class="button1">Шегички</a><br/>
+<br/>
 <a href="" class="button1">Космическа литература</a><br/>
+<br/>
 <a href="" class="button1">Интересни опити</a><br/>
+<br/>
 </body>
 
 </html>
