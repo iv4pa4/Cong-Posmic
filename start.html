@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta charset="UTF-8"></meta>
+</head>
+	<body  onload="init()">
+		<canvas id="canvas-id" width="window.innerWidth" height="window.innerHeight">
+            <script>
+		  	   let updateTime = 10; // in ms
+		  	   const canvas = document.getElementById("canvas-id");
+                let isUpdatePaused_ = false,
+                updateInterval = undefined;
+            </script>
+            <script src="game.js"></script>
+            <script>
+                const context = canvas.getContext("2d");
+                context.fillStyle = "#0000ff";
+                const reqAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function (callback) {
+				    setTimeout(callback, 1000 / 30);
+                };
+                function init() {
+                    updateInterval = setInterval(update, updateTime);
+                }
+			</script>
+		</canvas>
+	</body>
+</html>
