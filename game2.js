@@ -77,7 +77,6 @@ function update() {
     }
     if(curr_question<=9 && user_input){
         if((curr_question<=6 && user_input==qna.easy_correct_answers[curr_question]) || (curr_question>6 && user_input==qna.hard_correct_answers[curr_question-7])){
-            console.log("correct answer on question", curr_question)
             correct_cnt++;
         }
         user_input=0;
@@ -93,9 +92,27 @@ function update() {
         }
         displayQuestion(curr_question)
         if(curr_question==10){
-            $("#btn1").hide();
-            $("#btn2").hide();
-            $("#btn3").hide();
+            if(correct_cnt>=8){
+                $("#butonche1" ).click(function() {
+                    window.location.replace('you_win.php');
+                });
+                $("#butonche2" ).click(function() {
+                    window.location.replace('you_win.php');
+                });
+                $("#butonche3" ).click(function() {
+                    window.location.replace('you_win.php');
+                });
+            }else{
+                $("#butonche1" ).click(function() {
+                    window.location.replace('you_lose.php');
+                });
+                $("#butonche2" ).click(function() {
+                    window.location.replace('you_lose.php');
+                });
+                $("#butonche3" ).click(function() {
+                    window.location.replace('you_lose.php');
+                });
+            }
         }
     }
 }
