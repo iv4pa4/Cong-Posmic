@@ -8,9 +8,12 @@ if(!$object) die("Not found");
 <html>
 <head>
 <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
-<link rel="stylesheet" href="style.css?id=2">
+<link rel="stylesheet" href="style_t.css?id=2">
 </head>
 <body class="background3">
+<div class="zad">
+<a href="object.php" class="button3">Назад</a>
+</div>
 <h1 class="heading"><?=$object[0]['object_name'];?></h1>
 <div>
 <?php
@@ -23,5 +26,6 @@ if($object[0]['object_photo']){
 ?>
 <h4 class="text_info" align="right">Обща информация: <?=$object[0]['object_info']; ?></h4>
 </div>
+
 </body>
 </html>

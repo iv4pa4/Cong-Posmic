@@ -7,9 +7,12 @@ $objects = Select ($query);
 <html>
 <head>
 <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
-<link rel="stylesheet" href="style.css?id=2">
+<link rel="stylesheet" href="style_t.css?id=2">
 </head>
 <body class="background1">
+<div class="zad">
+<a href="planet_menu.php" class="button3">Назад</a>
+</div>
 <h1 class="heading">За какво искаш да научиш?</h1>
 <div align="center">
 <?php
@@ -23,6 +26,7 @@ if(is_array($objects)){
 }
 ?>
 </div>
+
 </body>
 
 </html>

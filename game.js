@@ -1,3 +1,9 @@
+var script = document.createElement('script');
+script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+
+
 var treemap = {
     idForYes: [1, 3, 5, null, 7, null, 9, null, 11, null, 13, null, null, null, null],
     idForNo: [2, 4, 6, null, 8, null, 10, null, 12, null, 14, null, null, null, null], //na principa "shte te izpratq nakudeto tva sochi i azko sochi null nqma da se zanimavam s teb" (budget pointers)
@@ -14,13 +20,10 @@ var curr_id=0;
 var question_index=0;
 var user_input=2; //-1=ne, 0=nz, 1=da
 var has_first_print_happened=false;
-var buttonyes=document.getElementById('buttonForYes');
-var buttonno=document.getElementById('buttonForNo');
-var buttonidk=document.getElementById('buttonForIDunno');
 
 function drawText(text, x, y){
     context.fillStyle="white"
-    context.font="24px Aclonica"
+    context.font="40px Aclonica"
     context.fillText(text, x, y)
 }
 
@@ -31,10 +34,10 @@ function change_iser_input(num){
 function displayQuestion(id) {
     context.clearRect(0, 0, window.innerWidth, window.innerHeight);
     if(question_index==3){
-        drawText("Иди да прочетеш малко повече и тогава пробвай пак!", 750, 300)
+        drawText("Иди да прочетеш малко повече и тогава пробвай пак!", 650, 300)
         return
     }
-    drawText(treemap.questions[id][question_index], 750, 300);
+    drawText(treemap.questions[id][question_index], 650, 300);
 }
 
 function shuffle(array) {
@@ -53,7 +56,7 @@ for(i=0; i<treemap.questions.length; i++){
 
 function update() {
     if(!has_first_print_happened){
-        drawText(treemap.questions[0][question_index], 750, 300)
+        drawText(treemap.questions[0][question_index], 650, 300)
         has_first_print_happened=true
     }
     if(user_input!=2 && (treemap.idForYes[curr_id] || treemap.idForNo[curr_id]) && question_index<3){
@@ -77,17 +80,17 @@ function update() {
     }
     if(!(treemap.idForYes[curr_id] || treemap.idForNo[curr_id])){
         if(user_input==-1){
-            context.clearRect(0, 0, 800, 600);
-            drawText("Поздравления! Ти ме победи", 750, 300)
-            buttonyes.style.display="none";
-            buttonno.style.display="none";
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            drawText("Поздравления! Ти ме победи", 650, 300)
+            $("#buttonForYes").hide();
+            $("#buttonForNo").hide();
         }
         if(user_input==1){
-            context.clearRect(0, 0, 800, 600);
-            drawText("Аз винаги печеля!", 750, 300)
-            buttonyes.style.display="none";
-            buttonno.style.display="none";
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            drawText("Аз винаги печеля!", 650, 300)
+            $("#buttonForYes").hide();
+            $("#buttonForNo").hide();
         }
-        buttonidk.style.display="none";
+        $("#buttonForIDunno").hide();
     }
 }

@@ -1,0 +1,129 @@
+body{
+	margin:0;
+	padding:0;
+	font-family: 'Aclonica';font-size: 22px;
+	
+	
+}
+
+.background{
+	background-image: url(background.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+.background1{
+	background-image: url(up1.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+.background2{
+	background-image: url(down.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+.background3{
+	background-image: url(clean.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.button1{
+  background-color: rgb(6, 0, 20);
+  border-style: solid;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  width: 350;
+	
+}
+
+.button1:hover{ background:rgb(6, 0, 53);
+}
+
+.button1:active{background:rgb(147,112,219);}
+
+.buttons_div {
+	text-align:center;
+	padding-top:450px;
+}
+.buttons_dov {
+	text-align:center;
+	padding-top:100px;
+}
+
+.button2 {
+  background-color: rgb(6, 0, 20);
+  border-style: solid;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  width: 200;
+  
+}
+.button2:hover{ background:rgb(6, 0, 53);
+}
+.button2:active{background:rgb(147,112,219);}
+
+.button3{
+  background-color: rgb(6, 0, 20);
+  border-style: solid;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  width: 100;
+	
+}
+
+.button3:hover{ background:rgb(6, 0, 53);
+}
+
+.button:active{background:rgb(147,112,219);}
+
+.zad{
+	padding-left: 5px;
+	padding-top: 5px;
+	
+}
+
+.buttons_dev {
+	text-align:center;
+	padding-top:200px;
+	padding-left:100px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  height:80%;
+}
+
+.heading{
+  padding-top: 5px;
+  color: white;
+  text-align:center;
+  text-shadow: 4px 4px black;
+	
+}
+
+.text_info{
+  padding-top: 50px;
+  color: white;
+  text-align:right;
+  text-shadow: 4px 4px black;
+  padding-right:50px;
+}
+
+.pad{
+	padding-left:50px;
+}

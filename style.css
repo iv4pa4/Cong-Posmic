@@ -3,28 +3,6 @@ body{
 	padding:0;
 	font-family: 'Aclonica';font-size: 22px;
 	
-	
-}
-
-.background{
-	background-image: url(background.jpg);
-	background-repeat: no-repeat;
-    background-size: cover;
-}
-.background1{
-	background-image: url(up1.jpg);
-	background-repeat: no-repeat;
-    background-size: cover;
-}
-.background2{
-	background-image: url(down.jpg);
-	background-repeat: no-repeat;
-    background-size: cover;
-}
-.background3{
-	background-image: url(clean.jpg);
-	background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .button1{
@@ -37,6 +15,14 @@ body{
   display: inline-block;
   font-size: 24px;
   width: 350;
+
+}
+
+.background{
+	background-image: url(backg.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+	background-position:center;
 	
 }
 
@@ -47,7 +33,7 @@ body{
 
 .buttons_div {
 	text-align:center;
-	padding-top:450px;
+	padding-bottom:300px;
 }
 .buttons_dоv {
 	text-align:center;
@@ -55,7 +41,7 @@ body{
 }
 
 .button2 {
-  background-color: rgb(6, 0, 20);
+  background-color: rgb(75,0,130);
   border-style: solid;
   color: white;
   padding: 15px 32px;
@@ -64,9 +50,8 @@ body{
   display: inline-block;
   font-size: 24px;
   width: 200;
-  
 }
-.button2:hover{ background:rgb(6, 0, 53);
+.button2:hover{ background:rgb(153,50,204);
 }
 .button2:active{background:rgb(147,112,219);}
 
@@ -90,16 +75,4 @@ body{
   text-align:center;
   text-shadow: 4px 4px black;
 	
-}
-
-.text_info{
-  padding-top: 50px;
-  color: white;
-  text-align:right;
-  text-shadow: 4px 4px black;
-  padding-right:50px;
-}
-
-.pad{
-	padding-left:50px;
 }
