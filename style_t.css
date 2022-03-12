@@ -27,6 +27,12 @@ body{
     background-size: cover;
 }
 
+.background4{
+	background-image: url(lay.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .button1{
   background-color: rgb(6, 0, 20);
   border-style: solid;
