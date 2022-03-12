@@ -12,7 +12,7 @@ if(!$object) die("Not found");
 </head>
 <body class="background3">
 <div class="zad">
-<a href="object.php" class="button3">Назад</a>
+<a href="objects.php" class="button3">Назад</a>
 </div>
 <h1 class="heading"><?=$object[0]['object_name'];?></h1>
 <div>
