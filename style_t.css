@@ -1,36 +1,45 @@
 body{
 	margin:0;
 	padding:0;
-	font-family: 'Aclonica';font-size: 22px;
-	
-	
+	font-family: 'Aclonica';font-size: 22px;	
 }
 
 .background{
 	background-image: url(background.jpg);
 	background-repeat: no-repeat;
-    background-size: cover;
+	height: 100%;
+	background-color: black;
+	background-position: center; 
+
 }
 .background1{
 	background-image: url(up1.jpg);
 	background-repeat: no-repeat;
-    background-size: cover;
+	height: 100%;
+	background-color: black;
+	background-position: center;
 }
 .background2{
 	background-image: url(down.jpg);
 	background-repeat: no-repeat;
-    background-size: cover;
+	height: 100%;
+	background-color: black;
+	background-position: center;
 }
 .background3{
-	background-image: url(clean.jpg);
+	background-image: url(lay.jpg);
 	background-repeat: no-repeat;
-    background-size: cover;
+	height: 100%;
+	background-color: black;
+	background-position: center;
 }
 
 .background4{
 	background-image: url(lay.jpg);
 	background-repeat: no-repeat;
-    background-size: cover;
+	height: 100%;
+	background-color: black;
+	background-position: center;
 }
 
 .button1{
@@ -121,13 +130,29 @@ body{
   text-shadow: 4px 4px black;
 	
 }
+.child{
+	float:left;
+	width: 50%
+	
+}
+.just{
+	color: white;
+	text-shadow: 4px 4px black;
+}
 
 .text_info{
-  padding-top: 50px;
+  padding-top: 5px;
   color: white;
   text-align:right;
   text-shadow: 4px 4px black;
   padding-right:50px;
+}
+.text_left{
+  padding-top: 5px;
+  color: white;
+  text-align:left;
+  text-shadow: 4px 4px black;
+  padding-left:50px;
 }
 
 .pad{
