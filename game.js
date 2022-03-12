@@ -34,10 +34,10 @@ function change_iser_input(num){
 function displayQuestion(id) {
     context.clearRect(0, 0, window.innerWidth, window.innerHeight);
     if(question_index==3){
-        drawText("Иди да прочетеш малко повече и тогава пробвай пак!", 650, 300)
+        drawText("Иди да прочетеш малко повече и тогава пробвай пак!", 300, 300)
         return
     }
-    drawText(treemap.questions[id][question_index], 650, 300);
+    drawText(treemap.questions[id][question_index], 300, 300);
 }
 
 function shuffle(array) {
@@ -56,7 +56,7 @@ for(i=0; i<treemap.questions.length; i++){
 
 function update() {
     if(!has_first_print_happened){
-        drawText(treemap.questions[0][question_index], 650, 300)
+        drawText(treemap.questions[0][question_index], 300, 300)
         has_first_print_happened=true
     }
     if(user_input!=2 && (treemap.idForYes[curr_id] || treemap.idForNo[curr_id]) && question_index<3){
@@ -79,18 +79,24 @@ function update() {
         }
     }
     if(!(treemap.idForYes[curr_id] || treemap.idForNo[curr_id])){
-        if(user_input==-1){
-            context.clearRect(0, 0, canvas.width, canvas.height);
-            drawText("Поздравления! Ти ме победи", 650, 300)
-            $("#buttonForYes").hide();
-            $("#buttonForNo").hide();
+		$("#buttonForYes" ).click(function() {
+				window.location.replace('victory.php');
+		});
+		$("#buttonForNo" ).click(function() {
+				window.location.replace('lose.php');
+		});
+       /* if(user_input==-1){
+           context.clearRect(0, 0, canvas.width, canvas.height);
+           drawText("Поздравления! Ти ме победи", 300, 300);
+           $("#buttonForYes").hide();
+           $("#buttonForNo").hide();
         }
         if(user_input==1){
             context.clearRect(0, 0, canvas.width, canvas.height);
-            drawText("Аз винаги печеля!", 650, 300)
-            $("#buttonForYes").hide();
+            drawText("Аз винаги печеля!", 300, 300)
+			$("#buttonForYes").hide();
             $("#buttonForNo").hide();
-        }
+        }*/
         $("#buttonForIDunno").hide();
     }
 }

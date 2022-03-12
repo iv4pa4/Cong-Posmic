@@ -20,10 +20,10 @@ body{
 
 .background{
 	background-image: url(backg.jpg);
-	background-repeat: no-repeat;
-	height: 100%;
 	background-color: black;
-	background-position: center; 
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center top; 
 	
 }
 
