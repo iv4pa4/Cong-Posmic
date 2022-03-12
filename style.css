@@ -2,14 +2,33 @@ body{
 	margin:0;
 	padding:0;
 	font-family: 'Aclonica';font-size: 22px;
-	background-image: url(backg.jpg);
-	background-repeat: no-repeat;
-    background-size: cover;
+	
 	
 }
 
+.background{
+	background-image: url(background.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+.background1{
+	background-image: url(up.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+.background2{
+	background-image: url(down.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+.background3{
+	background-image: url(clean.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .button1{
-  background-color: rgb(75,0,130);
+  background-color: rgb(6, 0, 20);
   border-style: solid;
   color: white;
   padding: 15px 32px;
@@ -21,14 +40,14 @@ body{
 	
 }
 
-.button1:hover{ background:rgb(153,50,204);
+.button1:hover{ background:rgb(6, 0, 53);
 }
 
 .button1:active{background:rgb(147,112,219);}
 
 .buttons_div {
 	text-align:center;
-	padding-top:300px;
+	padding-top:450px;
 }
 .buttons_dоv {
 	text-align:center;
@@ -36,7 +55,7 @@ body{
 }
 
 .button2 {
-  background-color: rgb(75,0,130);
+  background-color: rgb(6, 0, 20);
   border-style: solid;
   color: white;
   padding: 15px 32px;
@@ -47,7 +66,7 @@ body{
   width: 200;
   
 }
-.button2:hover{ background:rgb(153,50,204);
+.button2:hover{ background:rgb(6, 0, 53);
 }
 .button2:active{background:rgb(147,112,219);}
 

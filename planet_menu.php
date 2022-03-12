@@ -9,7 +9,7 @@ $planets = Select ($query);
 <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
 <link rel="stylesheet" href="style.css?id=2">
 </head>
-<body>
+<body class="background1">
 <h1 class="heading">За коя планета искаш да научиш?</h1>
 <div align="center">
 <?php

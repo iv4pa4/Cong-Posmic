@@ -16,7 +16,7 @@ $facts = Select ($query);
 if(is_array($facts)){
 	foreach($facts as $k => $value){
 		?>
-		<h4 class="text_info" align="right">Факт: <?=$fact[0]['fact_self']; ?></h4>
+		<h4 class="heading"><?=$value["fact_self"];?></h4><br />
 		<br/>
 		<?php
 	}

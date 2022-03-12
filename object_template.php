@@ -10,7 +10,7 @@ if(!$object) die("Not found");
 <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
 <link rel="stylesheet" href="style.css?id=2">
 </head>
-<body>
+<body class="background3">
 <h1 class="heading"><?=$object[0]['object_name'];?></h1>
 <div>
 <?php

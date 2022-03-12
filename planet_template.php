@@ -10,14 +10,14 @@ if(!$planet) die("Not found");
 <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
 <link rel="stylesheet" href="style.css?id=2">
 </head>
-<body>
+<body class="background3">
 <h1 class="heading"><?=$planet[0]['planet_name'];?></h1>
 <div>
 <?php
 
 if($planet[0]['planet_photo']){
 	?>
-	<img src="photos/<?=$planet[0]['planet_photo']?>" width="500" align="left"  border= "5px solid #555" class="pad"/>
+	<img src="photos/<?=$planet[0]['planet_photo']?>" width="500" align="left" class="pad"/>
 	<?php
 }
 ?>

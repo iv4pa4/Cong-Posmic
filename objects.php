@@ -9,14 +9,14 @@ $objects = Select ($query);
 <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
 <link rel="stylesheet" href="style.css?id=2">
 </head>
-<body>
-<h1 class="heading">За кой обект искаш да научиш?</h1>
+<body class="background1">
+<h1 class="heading">За какво искаш да научиш?</h1>
 <div align="center">
 <?php
 if(is_array($objects)){
 	foreach($objects as $k => $value){
 		?>
-		<h4><?=$value["fact_self"];?></h4><br />
+		<a class="button2" href="object_template.php?pid=<?=$value["object_id"];?>"><?=$value["object_name"];?></a><br />
 		<br/>
 		<?php
 	}
