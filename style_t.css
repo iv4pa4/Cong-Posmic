@@ -1,36 +1,82 @@
 body{
 	margin:0;
 	padding:0;
-	font-family: 'Aclonica';font-size: 22px;
-	
-	
+	font-family: 'Aclonica';font-size: 22px;	
 }
 
 .background{
 	background-image: url(background.jpg);
 	background-repeat: no-repeat;
-    background-size: cover;
+	height: 100%;
+	background-color: black;
+	background-position: center;
+ 
+
 }
 .background1{
 	background-image: url(up1.jpg);
 	background-repeat: no-repeat;
-    background-size: cover;
+	height: 100%;
+	background-color: black;
+	background-position: center;
 }
 .background2{
 	background-image: url(down.jpg);
 	background-repeat: no-repeat;
-    background-size: cover;
+	height: 100%;
+	background-color: black;
+	background-position: center;
 }
 .background3{
-	background-image: url(clean.jpg);
+	background-image: url(lay.jpg);
 	background-repeat: no-repeat;
-    background-size: cover;
+	height: 100%;
+	background-color: black;
+	background-position: center;
 }
 
 .background4{
 	background-image: url(lay.jpg);
 	background-repeat: no-repeat;
-    background-size: cover;
+	height: 100%;
+	background-color: black;
+	background-position: center;
+}
+
+.victory{
+	background-image: url(victory.jpg);
+	background-repeat: no-repeat;
+	background-color: black;
+	background-position: center; 
+	background-attachment: fixed;
+	
+}
+.lose{
+	background-image: url(lose.jpg);
+	background-repeat: no-repeat;
+	background-color: black;
+	background-position: center; 
+	background-attachment: fixed;
+	
+	
+}
+.ywin{
+	background-image: url(you_win.jpg);
+	background-repeat: no-repeat;
+	height: 100%;
+	background-color: black;
+	padding-left: 50px;
+	
+	
+}
+.ylose{
+	background-image: url(you_lose.jpg);
+	background-repeat: no-repeat;
+	height: 100%;
+	background-color: black;
+	padding-left: 50px;
+	
+	
 }
 
 .button1{
@@ -42,7 +88,7 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 24px;
-  width: 350;
+  width: 450;
 	
 }
 
@@ -50,10 +96,13 @@ body{
 }
 
 .button1:active{background:rgb(147,112,219);}
-
 .buttons_div {
 	text-align:center;
 	padding-top:450px;
+}
+.buttons_diiv {
+	text-align:center;
+	padding-top:100px;
 }
 .buttons_dov {
 	text-align:center;
@@ -121,13 +170,43 @@ body{
   text-shadow: 4px 4px black;
 	
 }
+.child{
+	float:left;
+	width: 50%
+	
+}
+.just{
+	color: white;
+	text-shadow: 4px 4px black;
+}
 
 .text_info{
-  padding-top: 50px;
+  padding-top: 5px;
   color: white;
   text-align:right;
   text-shadow: 4px 4px black;
-  padding-right:50px;
+  padding-right:100px;
+}
+.text_left{
+  padding-top: 5px;
+  color: white;
+  text-align:left;
+  text-shadow: 4px 4px black;
+  padding-left:250px;
+}
+.victory_left{
+  padding-top: 180px;
+  color: white;
+  text-align:left;
+  text-shadow: 4px 4px black;
+  padding-left:250px;
+}
+.ywint{
+  padding-top: 200px;
+  color: white;
+  text-align:right;
+  text-shadow: 4px 4px black;
+  padding-right:100px;
 }
 
 .pad{

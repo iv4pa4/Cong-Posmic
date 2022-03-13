@@ -4,7 +4,7 @@ script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
 
 var qna = { //qna=questions n answers, not yana
-    easy_questions: ["На коя планета освен Земята е имало живот?", "Коя е най-малката планета?", "Коя планета е позната като най-големият океан в Слънчевата система?", "До коя планета са изпращани най-много мисии до момента?", "Защо Марс изглежда розово-червеникав от разстояние?", "На коя планета гравитацията е почти същата като на Земята?", "Пръстените на коя планета носят имена на буквите от A до F?", "На коя планета се е намирало Голямото черно петно?", "Колко луни има Уран?", "На коя планета има най-рязки разлики между температурата денем и нощем?", "Коя е единствената позната ни планета, която има активна система от тектонски плочи?", 'Коя планета изглежда все едно се върти „отгоре надолу“?', "На коя планета са наблюдавани най-силните ветрове в Слънчевата система?", "Коя планета изглежда бледо жълта погледната от Земята?"],
+    easy_questions: ["На коя планета освен Земята е имало живот?", "Коя е най-малката планета?", "Коя планета е позната като  най-големият океан в Слънчевата система?", "До коя планета са изпращани най-много мисии до момента?", "Защо Марс изглежда розово-червеникав от разстояние?", "На коя планета гравитацията е почти същата като на Земята?", "Пръстените на коя планета носят имена на буквите от A до F?", "На коя планета се е намирало Голямото черно петно?", "Колко луни има Уран?", "На коя планета има най-рязки разлики между температурата денем и нощем?", "Коя е единствената позната ни планета, която има активна система от тектонски плочи?", 'Коя планета изглежда все едно се върти „отгоре надолу“?', "На коя планета са наблюдавани най-силните ветрове в Слънчевата система?", "Коя планета изглежда бледо жълта погледната от Земята?"],
     easy_answers: [["Марс", "Венера", "няма такава"], 
                    ["Венера", "Меркурий", "Марс"], 
                    ["Сатурн", "Уран", "Юпитер"], 
@@ -28,9 +28,6 @@ var qna = { //qna=questions n answers, not yana
 var curr_question=0;
 var user_input=0;
 var correct_cnt=0;
-var btn1=document.getElementById("butonche1")
-var btn2=document.getElementById("butonche2")
-var btn3=document.getElementById("butonche3")
 var has_first_run_happened=false
 
 function receive_input(num){
@@ -61,19 +58,22 @@ shuffle(qna.hard_questions, qna.hard_answers, qna.hard_correct_answers)
 function displayQuestion(id) {
     context.clearRect(0, 0, 1800, 600);
     if(curr_question<=6){
-        drawText(qna.easy_questions[curr_question], 400, 50);
+        drawText(qna.easy_questions[curr_question], 150, 180);
     }else{
-        drawText(qna.hard_questions[curr_question-7], 400, 50);
+        drawText(qna.hard_questions[curr_question-7], 150, 180);
     }
 }
 
 function update() {
+	var btn1=document.getElementById("butonche1")
+	var btn2=document.getElementById("butonche2")
+	var btn3=document.getElementById("butonche3")
     if(!has_first_run_happened){
+		displayQuestion(curr_question);
         btn1.innerText = qna.easy_answers[0][0]
         btn2.innerText = qna.easy_answers[0][1]
         btn3.innerText = qna.easy_answers[0][2]
-        displayQuestion(curr_question)
-        has_first_run_happened=true
+        has_first_run_happened=true;
     }
     if(curr_question<=9 && user_input){
         if((curr_question<=6 && user_input==qna.easy_correct_answers[curr_question]) || (curr_question>6 && user_input==qna.hard_correct_answers[curr_question-7])){
@@ -81,6 +81,7 @@ function update() {
         }
         user_input=0;
         curr_question++;
+		displayQuestion(curr_question);
         if(curr_question<=6){
             btn1.innerText = qna.easy_answers[curr_question][0]
             btn2.innerText = qna.easy_answers[curr_question][1]
@@ -90,7 +91,7 @@ function update() {
             btn2.innerText = qna.hard_answers[curr_question-7][1]
             btn3.innerText = qna.hard_answers[curr_question-7][2]
         }
-        displayQuestion(curr_question)
+        
         if(curr_question==10){
             if(correct_cnt>=8){
                 $("#butonche1" ).click(function() {

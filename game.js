@@ -34,8 +34,12 @@ function change_iser_input(num){
 function displayQuestion(id) {
     context.clearRect(0, 0, window.innerWidth, window.innerHeight);
     if(question_index==3){
-        drawText("Иди да прочетеш малко повече и тогава пробвай пак!", 300, 300)
-        return
+        drawText("Иди да прочетеш малко повече и тогава пробвай пак!", 300, 300);
+		document.getElementById("buttonForYes").style.display = "none";
+        document.getElementById("buttonForNo").style.display = "none";
+		document.getElementById("buttonForIDunno").style.display = "none";
+        document.getElementById("buttonForChronic").style.display = "block";
+        return;
     }
     drawText(treemap.questions[id][question_index], 300, 300);
 }
