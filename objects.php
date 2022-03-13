@@ -11,7 +11,7 @@ $objects = Select ($query);
 </head>
 <body class="background1">
 <div class="zad">
-<a href="planet_menu.php" class="button3">Назад</a>
+<a href="chronic_info.php" class="button3">Назад</a>
 </div>
 <h1 class="heading">За какво искаш да научиш?</h1>
 <div align="center">

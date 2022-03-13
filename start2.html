@@ -6,13 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 	<meta charset="UTF-8"></meta>
 </head>
-	<body  onload="init()">
-        <div class="buttons_div">
-            <p id="butonche1" class=button1 onclick="receive_input(1)">Option 1</p>
-            <p id="butonche2" class=button1 onclick="receive_input(2)">Option 2</p>
-            <p id="butonche3" class=button1 onclick="receive_input(3)">Option 3</p>
-        </div>
-        <canvas id="canvas-id" width="1800" height="600">
+	<body  class="background" onload="init()">
+        
+        <canvas id="canvas-id" width="1800" height="400">
             <script>
 		  	   let updateTime = 10; // in ms
 		  	   const canvas = document.getElementById("canvas-id");
@@ -31,5 +27,10 @@
                 }
 			</script>
 		</canvas>
+		<div class="buttons_div">
+            <p id="butonche1" class=button1 onclick="receive_input(1)">Option 1</p>
+            <p id="butonche2" class=button1 onclick="receive_input(2)">Option 2</p>
+            <p id="butonche3" class=button1 onclick="receive_input(3)">Option 3</p>
+        </div>
 	</body>
 </html>
