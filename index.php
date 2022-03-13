@@ -7,8 +7,8 @@
 <body class="background">
 <div class="buttons_div">
 <a href="menu.php" class="button2">Космическите хроники</a>
-<a href="start.html" class="button2">Предизвикай Cong Posmic</a>
-<a href="" class="button2">Стани част от екипажа</a>
+<a href="instructions.php" class="button2">Предизвикай Cong Posmic</a>
+<a href="instruct_2.php" class="button2">Стани част от екипажа</a>
 </div>
 </body>
 </html>

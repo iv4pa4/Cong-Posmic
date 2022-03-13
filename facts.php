@@ -15,7 +15,9 @@ $facts = Select ($query);
 <?php
 if(is_array($facts)){
 	foreach($facts as $k => $value){
+		
 		?>
+		<img src="photos/<?=<?=$value["fact_photo"];?>$?>" width="250" align="left" class="pad"/>
 		<h4 class="heading"><?=$value["fact_self"];?></h4><br />
 		<br/>
 		<?php
